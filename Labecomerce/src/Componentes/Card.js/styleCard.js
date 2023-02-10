@@ -8,8 +8,7 @@ export const StyledCard = styled.div(({produto})=>`
     justify-content: center;
     width: auto;
     height: 27vh;
-
-    background-image:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url(${produto}) ;
+    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(${produto}) ;
     background-size: cover;
     background-position: center;
 

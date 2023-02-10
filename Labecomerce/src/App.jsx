@@ -13,32 +13,67 @@ function App() {
 
   const produtos = [
     {
-      nome: "HUBBLE",
+      nome: "EXPLORER 1",
       img: "https://terramagna.com.br/wp-content/uploads/2022/09/aparelho-imagens-de-satelite-espaco-terra.jpg",
       preco: 1000000,
-      descricao: "O melhor dos satélites",
+      descricao: "Os Estados Unidos lançaram seu primeiro satélite, que chegou à órbita da Terra em 31 de janeiro de 1958. A maior façanha do Explorer 1 foi confirmar a existência dos cinturões de Van Allen, que são zonas de partículas carregadas que armazenam a radiação na magnetosfera.",
       id: 1
     },
     {
-      nome: "BUBBLEBEE",
-      img: "https://ogimg.infoglobo.com.br/in/12792199-5d6-92c/FT1086A/satelite-oi.jpg",
+      nome: "SPUTNIK",
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Sputnik_asm.jpg/800px-Sputnik_asm.jpg",
       preco: 200000,
-      descricao: "O melhor dos satélites",
+      descricao: "O pontapé da corrida espacial foi dado pela União Soviética ao colocar com segurança o primeiro satélite artificial na órbita da Terra. O lançamento ocorreu em 4 de outubro de 1957 a partir de uma base no Cazaquistão, local que até hoje é usado para lançamentos espaciais russos. O Sputnik coletou dados sobre a densidade de camadas atmosféricas superiores, além de medir a qualidade dos sinais de rádio na ionosfera.",
       id: 2
     },
     {
-      nome: "KUBRICK",
+      nome: "EXPLORER 6",
       img: "https://uploads.jovemnerd.com.br/wp-content/uploads/2022/02/satelite-capa.jpg",
       preco: 550000,
-      descricao: "O melhor dos satélites",
+      descricao: "As principais funções do Explorer 6, lançado em agosto de 1959, eram estudar a radiação das camadas superiores e determinar a frequência com que micrometeoritos penetravam nossa atmosfera. Uma missão paralela fez a primeira imagem da Terra vista do espaço: um fotografia do México.",
       id: 3
     },
     {
-      nome: "HOPI HARI",
-      img: 'https://energiainteligenteufjf.com.br/wp-content/uploads/2020/09/qual-tamanho-satelite-tricurioso.jpg',
+      nome: "TIROS-1",
+      img: 'https://images7.alphacoders.com/807/807182.jpg',
       preco: 460000,
-      descricao: "O melhor dos satélites",
+      descricao: "Esse satélite foi o primeiro a ter funções meteorológicas, com duas câmeras acopladas que tiravam fotografias das nuvens sobre a Terra e enviavam os sinais via ondas de TV.",
       id: 4
+    },
+    {
+      nome: "VOSTOK-1",
+      img: 'https://wallpaperaccess.com/full/309407.jpg',
+      preco: 290000,
+      descricao: 'Em 1961, a União Soviética lançou o primeiro satélite com um homem a bordo. A frase "A Terra é azul!", de Yuri Gagarin, entrou para a história. O lançamento, em 12 de abril, foi visto como o ápice da corrida espacial, mas hoje é celebrado como o pontapé das jornadas espaciais. Até o momento, mais de 500 pessoas já foram ao espaço.',
+      id: 5
+    },
+    {
+      nome: "LUNA-10",
+      img: 'https://wallpaperaccess.com/full/1581974.jpg',
+      preco: 100000,
+      descricao: "Em 1966, a União Soviética também foi a primeira a colocar um satélite na órbita da Lua. O Luna 10 mediu o campo magnético, a radiação, a gravidade e outras funções de nosso satélite natural. Um espectrômetro de raios gama também coletou informações sobre a composição do solo de lá. Na sequência dos marcos, a Apollo 8 foi a primeira a colocar humanos na órbita da Lua, em 1968, enquanto a Apollo 11 foi a histórica missão que pousou na Lua em 20 de julho de 1969.",
+      id: 6
+    },
+    {
+      nome: "MARINER-9",
+      img: 'https://fractalsponge.net/wp/wp-content/uploads/2015/01/asd79.jpg',
+      preco: 790000,
+      descricao: "A NASA pretendia colocar duas sondas na órbita de Marte, mas a Mariner 8 fracassou. Assim, coube à Mariner 9 chegar sozinha ao Planeta Vermelho em 14 de novembro de 1971. Ela trabalhou dobrado, conseguiu cumprir as missões de ambas e mapeou 70% do solo marciano.",
+      id: 7
+    },
+    {
+      nome: "HUBBLE",
+      img: 'https://img.ibxk.com.br/2020/10/09/09002822516488.jpg?ims=704x',
+      preco: 2000000,
+      descricao: "Apesar de não ter sido o primeiro telescópio espacial lançado, o Hubble marcou uma nova era na pesquisa espacial, incluindo estudos de longo prazo. Ele foi lançado em 1990 e registrou algumas das mais famosas imagens do Universo, como a dos Pilares da Criação, na nebulosa da Águia. Após 3 décadas, ele segue operante.",
+      id: 8
+    },
+    {
+      nome: "GALILEO",
+      img: 'https://energiainteligenteufjf.com.br/wp-content/uploads/2020/09/qual-tamanho-satelite-tricurioso.jpg',
+      preco: 127000,
+      descricao: "Depois de outras sondas fazerem voos diretos a Júpiter, Galileo foi a primeira a orbitar o maior planeta do Sistema Solar, em 1995. Ele pesquisou a história geológica e as luas do gigante gasoso.",
+      id: 9
     }
   ]
 
