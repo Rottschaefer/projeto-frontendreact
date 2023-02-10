@@ -6,7 +6,7 @@ display: flex;
   align-items: center;
   gap: 10px;
   width: 80vw;
-  height: 40vh;
+  height: auto;
   position: fixed;
   top: 50%;
   left: 50%;

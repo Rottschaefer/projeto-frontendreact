@@ -6,7 +6,7 @@ export const StyledPopUp = styled.div`
   align-items: center;
   gap: 10px;
   width: 80vw;
-  height: 30vh;
+  height: auto;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -18,6 +18,8 @@ export const StyledPopUp = styled.div`
   z-index: 10;
   font-family: 'Kanit', sans-serif;
   font-weight: 500;
+  text-align: justify;
+
 
 
 @font-face {
@@ -25,17 +27,29 @@ export const StyledPopUp = styled.div`
   src: url("/../../src/assets/Quantum.otf") format("opentype");
 }
 
+@media (min-width: 700px) {
+width: 60vw;
+height: auto;
+
+}
+
 `
 
 export const StyledButton = styled.button`
   margin: 20px;
     padding: 5px;
-    width: 38vw;
+    width: 80%;
+    height: auto;
     align-self: center;
     border: none;
     border-radius:2px;
     background-color: black;
     color: white;
     font-family: 'Kanit', sans-serif;
+
+    @media (min-width: 700px) {
+width: 50%;
+}
+
 `
 
