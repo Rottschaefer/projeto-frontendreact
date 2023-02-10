@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import { Header } from './Componentes/Header/Header'
@@ -55,6 +55,36 @@ function App() {
   const [showCarrinho, setShowCarrinho] = useState(false)
   const [carrinho, setCarrinho] = useState([])
   const [valorTotal, setValorTotal] = useState(0)
+  const [contador, setContador] = useState(0);
+
+  useEffect(() => {
+    if (carrinho.length > 0) {
+      localStorage.setItem("itensCarrinho", JSON.stringify(carrinho))
+      localStorage.setItem("contador", JSON.stringify(contador))
+    }
+  }, [carrinho])
+
+  useEffect(() => {
+    const itensCarrinho = JSON.parse(localStorage.getItem("itensCarrinho"))
+    const contadorGuardado = JSON.parse(localStorage.getItem("contador"))
+    if (itensCarrinho) {
+      setCarrinho(itensCarrinho)
+      setContador(contadorGuardado)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (valorTotal > 0) {
+      localStorage.setItem("valorCarrinho", JSON.stringify(valorTotal))
+    }
+  }, [valorTotal])
+
+  useEffect(() => {
+    const valorCarrinho = JSON.parse(localStorage.getItem("valorCarrinho"))
+    if (valorCarrinho) {
+      setValorTotal(valorCarrinho)
+    }
+  }, [])
 
   // const valorTotalHandler = () => {
   //   for(i=0;i<carrinho.length;i++){
@@ -65,21 +95,30 @@ function App() {
 
 
   const removerCarrinho = (id) => {
-   
+
     setCarrinho(carrinho.filter((satelite) => {
       if (satelite.id !== id) {
         return satelite
       }
+      else{
+        setValorTotal(valorTotal - satelite.preco)
+        console.log(valorTotal)
+      }
     }))
+    if(contador>0){
+    setContador(contador-1)
+    }
   }
 
   const adicionarCarrinho = (item) => {
     const clicado = produtos.filter((satelite) => (satelite.id == clickId))[0];
     clicado.id = Date.now()
     setCarrinho([...carrinho, clicado]);
-    console.log(carrinho)
-    setValorTotal(valorTotal+clicado.preco)
-    
+    setValorTotal(valorTotal + clicado.preco)
+    setContador(contador+1)
+    console.log(contador)
+
+
   }
 
   // No Iphone se eu adiciono várias vezes no carrinho ele adiciona a mais
@@ -175,7 +214,7 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <Header showCarrinhoHandler={showCarrinhoHandler} />
+      <Header showCarrinhoHandler={showCarrinhoHandler} contador={contador}/>
       {showPopUp && <PopUp produtos={produtos} clickId={clickId} adicionarCarrinho={adicionarCarrinho} />}
       {showFiltro && <PopUpFilter valorMax={valorMax} valorMaxHandler={valorMaxHandler} getValorMax={valorMax} valoresHandler={valoresHandler} resetValores={resetValores} valorMin={valorMin} valorMinHandler={valorMinHandler} buscaNome={buscaNome} buscaNomeHandler={buscaNomeHandler} />}
       {showCarrinho && <Carrinho carrinho={carrinho} removerCarrinho={removerCarrinho} setCarrinho={setCarrinho} valorTotal={valorTotal} />}

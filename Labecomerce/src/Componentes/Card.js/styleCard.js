@@ -11,6 +11,7 @@ export const StyledCard = styled.div(({produto})=>`
 
     background-image:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url(${produto}) ;
     background-size: cover;
+    background-position: center;
 
     /* background-color: black; */
     margin: 10px;
